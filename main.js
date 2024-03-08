@@ -28,7 +28,7 @@ function main() {
         imageDiv.classList.add('imageWrapper');
         
         let image = document.createElement('img');
-        image.src = finalResult.urls.small;
+        image.src = finalResult.urls.full;
         image.classList.add('genImage');
         
         imageDiv.appendChild(image);
