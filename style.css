@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+
+:root {
+  --main: #ECEEFF;
+  --inpColor: #fff;
+  --btnColor: #fff;
+  --formColor: rgba(255, 255, 255, 0.6);
+  --themeBg:#252733;
+  --shadow1:rgba(0, 0, 0, 0.1);
+  --shadow2: rgba(255, 255, 255, 0.1);
+  --txtColor: #000;
+}
+
+:root .dark{
+  --main:#252733;
+    --inpColor:  #3B3B3B;
+    --btnColor: #121212;
+    --formColor: #1A1B1F;
+    --themeBg:#ECEEFF;
+      --shadow1:rgba(255, 255, 255,.3);
+      --shadow2: none;
+      --txtColor: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  max-height: 100vh;
+  width: 100%;
+  background-color: var(--main);
+  transition:.3s linear;
+}
+
+
+.square {
+  position: absolute;
+  height: 1.8rem;
+  width: 3rem;
+  background: var(--themeBg);
+  top: 10px;
+  right:10px;
+  border-radius: 5rem;
+  display: flex;
+  align-items: center;
+  border: none;
+
+  }
+
+.circle{
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  margin-left: 3px;
+  background: url(moon-stars-svgrepo-com.svg) no-repeat;
+  transition:0.3s linear all;
+}
+
+
+h1 {
+  font-family: "Madimi One", sans-serif;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 48px;
+  background: linear-gradient(45deg, #ff00cc, #3333ff, #00ffcc);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 5s linear infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px;
+  margin: 20px auto;
+  background-color: transparent;
+  position: relative;
+}
+
+form {
+  height: 5rem;
+  background-color: var(--formColor);
+  margin: 15px;
+  width: 90%;
+  max-width: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  gap: 10px;
+  box-shadow: 0 0 10px var(--shadow1);
+  margin-bottom: 30px;
+
+}
+
+input {
+  width: 80%;
+  height: 80%;
+  border: none;
+  outline: 0;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 18px;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, .1),
+    -4px -4px 5px var(--shadow2);
+  background-color: var(--inpColor);
+  color: var(--txtColor);
+}
+
+.searchBtn {
+  flex: 1;
+  background: var(--btnColor);
+  border: none;
+  height: 80%;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 4px 4px 5px var(--shadow1),
+    -4px -4px 5px var(--shadow2);
+  user-select: none;
+}
+
+.searchBtn:active {
+  box-shadow: 4px 4px 5px rgba(255, 255, 255, .1),
+    -4px -4px 5px rgba(0, 0, 0, 0.1);
+}
+
+.searchBtn img {
+  width: 25px;
+  user-select: none;
+  size: cover;
+  position: center;
+}
+
+.container .images {
+  margin: auto;
+  width: 96%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  position: relative;
+}
+
+.images .downloadBtn{
+  text-decoration: none;
+  font-size: 22px;
+  color: #fff;
+  display: none;
+  position: absolute;
+  background: rgba(0, 0, 0,.6);
+  border-radius: 10px;
+  border: none;
+  padding: 8px;
+  transition: all .5s linear;
+  margin-top: 28px;
+  right: 0px;
+  top: 0;
+}
+
+
+.images .downloadBtn .download {
+  width: 22px;
+}
+
+
+.images .genImage {
+  width: 400px;
+  border-radius: 8px;
+  position: relative;
+  margin-top: 20px;
+  border: 1px solid black;
+  height: 400px;
+  object-fit: cover;
+}
+
+
+.images img:hover .downloadBtn{
+  display: flex;
+  width: 25px;
+  position: absolute;
+  right: 10px;
+  flex: none;
+  top: 10px;
+  background: white;
+  border-radius: 50%;
+  border: none;
+  padding: 2px;
+  transition: all .5s linear;
+}
+
+
+.more {
+  height: 3rem;
+  width: 9rem;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  background-color: orange;
+  font-size: 18px;
+  font-weight: bolder;
+  margin: 10px auto 30px auto;
+  text-transform: capitalize;
+  display: none;
+}
+
+.more img {
+  width: 25px;
+  margin-left: 5px;
+  transform: rotate(90deg)
+}
+
+.more:active {
+  background: deepskyblue;
+  color: #fff;
+  transform: scale(.9);
+}
