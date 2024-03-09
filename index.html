@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
   <title>STUDIO-RT || PictoProbe</title>
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="responsive.css">
-
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
 </head>
 
 <body>
@@ -27,7 +27,7 @@
     
     <div class="container">
       <div class="images">
-        <img src="" >
+        <img class="genImage" src="skeleton.jpg" >
         <a class="downloadBtn"  href="">
           <img src="download-cloud-svgrepo-com.svg" alt="" class="download"></a>
       </div>
@@ -40,6 +40,28 @@
     </div>
 
   </div>
+  
+  
+  <hr>
+ <footer>
+   
+   <form  id="contact" action="https://api.web3forms.com/submit" method="POST">
+
+    <input type="hidden" name="access_key" value="504a7a12-489f-4138-ae48-fae06bef3e28">
+
+    <input class="name" type="text" name="name" placeholder="Your Name" required>
+    <input class="email" type="email" name="email" placeholder="Your E-mail" required>
+    <textarea class="message" name="message" placeholder="Comment your opinion..." required></textarea>
+    <div class="h-captcha" data-captcha="false"></div>
+    <button class="submit" type="submit">Send</button>
+
+</form>
+
+<script src="https://web3forms.com/client/script.js" async defer></script>
+   
+    <h1 class="footer-text">STUDIO-RT || PictoProbe || &copy; Copyright 2024 - All rights reserved by Ritesh Sarkar!</h1>
+  </footer> 
+  
   <script src="main.js" defer></script>
 </body>
 
